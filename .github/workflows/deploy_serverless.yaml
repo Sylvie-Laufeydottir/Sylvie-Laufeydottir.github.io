@@ -30,5 +30,4 @@ jobs:
       - run: npm install
       - run: npm install -g @serverless-devs/s
       - run: s config add --AccessKeyID ${{secrets.AccessKeyID}} --AccessKeySecret ${{secrets.AccessKeySecret}} -a default -f
-      - run: cd src && pwd && ls
-      - run: s deploy -y --use-local -t s.yaml
+      - run: s deploy -y --use-local -t src/s.yaml
