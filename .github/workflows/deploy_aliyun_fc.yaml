@@ -2,7 +2,7 @@ name: deploy fc on gh-pages
 
 on:
   push:
-    branches: [ gh-pages ]
+    branches: [ master ]
 jobs:
   deploy:
     runs-on: ubuntu-20.04
@@ -20,6 +20,10 @@ jobs:
           hugo-version: '0.112.5'
           # extended: true
 
+      - name: Build
+        run: hugo --minify --baseURL kyuubi.art
+        working-directory: src/ 
+        
       - uses: actions/setup-node@v2
         with:
           node-version: 12
@@ -27,4 +31,4 @@ jobs:
       - run: npm install
       - run: npm install -g @serverless-devs/s
       - run: s config add --AccessKeyID ${{secrets.AccessKeyID}} --AccessKeySecret ${{secrets.AccessKeySecret}} -a default -f
-      - run: s deploy -y --use-local
+      - run: s deploy -y --use-local -t src/public/s.yaml
