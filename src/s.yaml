@@ -3,7 +3,7 @@ name: start-hugo #  项目名称
 access: "default" #  秘钥别名
 
 vars: # 全局变量
-  region: "cn-shanghai"
+  region: "cn-hangzhou"
 
 services:
   start-hugo:
@@ -11,6 +11,7 @@ services:
     actions:
       pre-deploy:
         - run: hugo -D
+          path: src/
         - plugin: website-fc
     props: # 组件的属性值
       region: ${vars.region} # 关于变量的使用方法，可以参考：https://www.serverless-devs.com/serverless-devs/yaml#变量赋值
@@ -20,7 +21,7 @@ services:
       function:
         name: "hugo"
         description: "Serverless Devs Website hugo Function"
-        codeUri: ./public
+        codeUri: ./src/public
         timeout: 30
         memorySize: 512
       triggers:
