@@ -21,6 +21,7 @@ services:
         description: "Serverless Devs Website hugo Function"
         timeout: 30
         memorySize: 512
+        codeUri: ./
       triggers:
         - name: httpTrigger
           type: http
