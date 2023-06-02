@@ -5,10 +5,11 @@ defaultContentLanguage: 'en'
 theme: eternity
 googleAnalytics: '' # todo: set your analytics id.
 
+
 params:
   image: /images/banner.png
   logo: logo.png # todo: add your custom logo to static/
-  subtitle: Eternity is a minimalist Hugo theme designed for portfolio sites with a fresh feel. # todo: change default subtitle for your website.
+  subtitle: '' # todo: change default subtitle for your website.
   copyright: 京ICP备2020037990号-2 # todo: set your copyright type.
   author: Sylvie Laufeydottir # todo: set your full name.
   dontShowSource: true # please, do not do this :)
@@ -31,12 +32,12 @@ params:
     - icon: 'fab fa-github fa-lg'
       url: 'https://github.com/Sylvie-Laufeydottir'
       landing: true
-  # homepage: "/work" # todo: uncomment homepage, homepage link is mostly same with menu.main[0]
+  homepage: "/work" # todo: uncomment homepage, homepage link is mostly same with menu.main[0]
   specialPages:
     - work
     - archive
   bypassWelcomePage: false # redirects "/" to "homepage" when it's true.
-  plausible: '' # todo: set your plausible id.
+  plausible: '1111' # todo: set your plausible id.
   disableWelcomePageBackground: false # disables the background image on the homepage
   disableRadius: false
   moveIt: false # Moves Title and Meta info down, only visible when scroll.
@@ -62,12 +63,15 @@ menu:
     - name: people
       url: /tags/people/
       weight: 2
+    - name: space
+      url: /tags/space
+      weight: 3
     - name: nature
       url: /tags/nature/
-      weight: 3
+      weight: 4
     - name: archive
       url: /tags/archive/
-      weight: 4
+      weight: 5
     - name: about
       url: /about/
-      weight: 5
+      weight: 6
