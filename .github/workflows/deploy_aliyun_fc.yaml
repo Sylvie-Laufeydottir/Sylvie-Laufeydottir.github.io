@@ -21,7 +21,7 @@ jobs:
           # extended: true
 
       - name: Build
-        run: hugo --minify --baseURL kyuubi.art
+        run: hugo --minify --baseURL https://kyuubi.art/
         working-directory: src/ 
         
       - uses: actions/setup-node@v2
