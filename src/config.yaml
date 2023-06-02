@@ -9,7 +9,7 @@ googleAnalytics: '' # todo: set your analytics id.
 params:
   image: /images/banner.png
   logo: logo.png # todo: add your custom logo to static/
-  subtitle: '' # todo: change default subtitle for your website.
+  subtitle: ' ' # todo: change default subtitle for your website.
   copyright: 京ICP备2020037990号-2 # todo: set your copyright type.
   author: Sylvie Laufeydottir # todo: set your full name.
   dontShowSource: true # please, do not do this :)
