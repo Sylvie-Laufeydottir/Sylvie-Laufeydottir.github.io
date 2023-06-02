@@ -1,4 +1,4 @@
-name: deploy fc on gh-pages
+name: deploy fc
 
 on:
   push:
